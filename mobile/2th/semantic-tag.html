@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 시맨틱 태그 실습</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "맑은 고딕", sans-serif; }
+
+    header, nav, section, article, aside, footer {
+      padding: 12px 16px;
+      border: 1px solid #333;
+    }
+
+    header { background: #8bd3c7; }
+    nav { background: #ccebc5; }
+    section { background: #fddaec; }
+    article { background: #fed9a6; margin-top: 10px; }
+    aside { background: #b3cde3; }
+    footer { background: #decbe4; }
+
+    .wrap { display: flex; }
+    .main { flex: 3; }
+    aside { flex: 1; }
+
+    h1, h2, h3 { margin: 0 0 8px 0; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Header 영역</h1>
+    <p>문서 또는 섹션의 머리말(로고, 제목 등)을 나타낸다.</p>
+  </header>
+
+  <nav>
+    <h2>Nav 영역</h2>
+    <p>문서 내 다른 페이지로 이동할 수 있는 메뉴(링크 모음)를 나타낸다.</p>
+  </nav>
+
+  <div class="wrap">
+    <div class="main">
+      <section>
+        <h2>Section1 영역</h2>
+        <p>
+          section 태그는 문서에서 제목을 제외한 내용물을 그룹화하는 역할을 한다.
+          h1~h6 태그로 소제목을 사용하며 다양한 요소로 구성할 수 있다.
+          section 태그 안에 다른 section 태그를 중첩해서 사용할 수 있다.
+        </p>
+      </section>
+
+      <section>
+        <h2>Section2 영역</h2>
+        <p>내용 구성에 따라 section 태그 안에 article 태그를, 또는 article 태그 안에 section 태그를 포함시킬 수 있다.</p>
+
+        <article>
+          <h3>Article1 영역</h3>
+          <p>
+            article 태그는 문서 내에서 재사용, 변경 등이 가능한 독립적인 내용을 포함한다.
+            블로그 게시글, 뉴스 기사 등이 해당한다. 블로그와 같이 사용자 댓글을 포함할 수 있는
+            콘텐츠 등이 article 태그에 해당된다.
+          </p>
+        </article>
+      </section>
+    </div>
+
+    <aside>
+      <h2>Aside 영역</h2>
+      <p>본문 내용과 관련은 있으나 직접적이지 않은 부가 정보(광고, 링크 목록 등)를 나타낸다.</p>
+    </aside>
+  </div>
+
+  <footer>
+    <h2>Footer 영역</h2>
+    <p>문서 또는 섹션의 꼬리말(저작권, 작성자 정보 등)을 나타낸다.</p>
+  </footer>
+
+</body>
+</html>
